@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>モーダル画面</title>
+  </head>
+  <body>
+    <div class="modal">
+      <div class="modal-overlay"></div>
+      <div class="modal-container"></div>
+    </div>
+
+    <h2 class="page">商品一覧</h2>
+
+    <div class="form">
+      <div class="radio-box">
+        <input type="radio" name="dataType" value="xml">XML形式
+        <input type="radio" name="dataType" value="json">JSON形式
+      </div>
+
+      <button id="getData">取得</button>
+    </div>
+
+    <div id="items"></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>

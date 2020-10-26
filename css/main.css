@@ -1,0 +1,339 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  margin: 0 0 40px 0;
+  width: 100%;
+  height: 100px;
+  background-color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  display: block;
+  margin-left: 20px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header h1 img {
+  height: 70%;
+  cursor: pointer;
+}
+
+header nav {
+  width: 40%;
+  height: 100%;
+  margin-right: 20px;
+}
+
+header nav ul {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+  align-items: center;
+}
+
+header nav ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 25%;
+}
+
+header nav ul li .active {
+  color: #ccc;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.1s;
+}
+
+header nav ul li a:hover {
+  color: #999;
+}
+
+.page {
+  text-align: center;
+  margin: 0 0 40px 0;
+  font-size: 2rem;
+  color: #555;
+}
+
+footer {
+  height: 100px;
+  background: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+footer p {
+  color: #fff;
+}
+
+div.form {
+  width: 100%;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+div.form .radio-box {
+  display: inline-block;
+}
+
+div.form #getData {
+  display: block;
+  margin: 20px auto;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 1rem;
+  padding: 10px 20px;
+  background: deepskyblue;
+  cursor: pointer;
+}
+
+div.form #getData:hover {
+  opacity: 0.7;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s, visibility 0.5s;
+}
+
+.modal-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.7;
+}
+
+.modal-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 80%;
+  min-width: 320px;
+  background-color: #fff;
+  overflow-y: scroll;
+}
+
+.modal-container .close-button {
+  position: absolute;
+  top: 10px;
+  right: 30px;
+  font-size: 4rem;
+  color: #999;
+  transition: color 0.2s;
+}
+
+.modal-container .close-button:hover {
+  color: #ccc;
+}
+
+.modal-container div.item-area {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.modal-container div.item-area .name {
+  font-size: 1.5rem;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.modal-container div.item-area .category {
+  margin: 35px 0;
+  color: #666;
+  cursor: pointer;
+}
+
+.modal-container div.item-area .category:hover {
+  text-decoration: underline;
+}
+
+.modal-container div.item-area .flexbox {
+  margin: 35px 0 0 0;
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.modal-container div.item-area .flexbox .flex-child1 {
+  width: 50%;
+}
+
+.modal-container div.item-area .flexbox .flex-child1 img {
+  width: 80%;
+}
+
+.modal-container div.item-area .flexbox .flex-child2 {
+  width: 50%;
+}
+
+.modal-container div.item-area .flexbox .flex-child2 .regular {
+  color: #f13;
+  font-weight: bold;
+  font-size: 1.7rem;
+  margin-bottom: 20px;
+}
+
+.modal-container div.item-area .flexbox .flex-child2 .discount {
+  color: #f13;
+  font-weight: bold;
+  font-size: 1.7rem;
+  margin-bottom: 20px;
+}
+
+.modal-container div.item-area .flexbox .flex-child2 .line {
+  text-decoration: line-through;
+  color: #888;
+  font-weight: normal;
+  font-size: 1.2rem;
+  margin-bottom: 0;
+}
+
+.modal-container div.item-area .flexbox .flex-child2 .description {
+  line-height: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.modal-container div.item-area .flexbox .flex-child2 .button-area {
+  margin: 0 auto;
+  width: 80%;
+  height: 50px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.modal-container div.item-area .flexbox .flex-child2 .button-area .cart-in {
+  display: block;
+  background: orange;
+  color: #eee;
+  border: none;
+  width: 40%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.modal-container div.item-area .flexbox .flex-child2 .button-area .like {
+  display: block;
+  background: deeppink;
+  color: #eee;
+  border: none;
+  width: 40%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.modal-container div.item-area .flexbox .flex-child2 .button-area button {
+  transition: opacity 0.2s;
+}
+
+.modal-container div.item-area .flexbox .flex-child2 .button-area button:hover {
+  opacity: 0.7;
+}
+
+.flexbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#items {
+  width: 85%;
+  margin: 0 auto;
+}
+
+#items .item {
+  width: 100%;
+  height: 350px;
+  margin-bottom: 30px;
+  padding: 30px 0;
+  border-radius: 10px;
+  border: 1px solid #777;
+  transition: border, background 0.2s;
+  cursor: pointer;
+}
+
+#items .item:hover {
+  border: 3px solid #777;
+  background: #eee;
+}
+
+#items .item .flex-child1 {
+  margin-left: 30px;
+}
+
+#items .item .flex-child1 img {
+  width: 220px;
+  max-height: 100%;
+}
+
+#items .item .flex-child2 {
+  margin: 0 30px;
+  width: 85%;
+  height: 100%;
+  overflow-y: hidden;
+}
+
+#items .item .flex-child2 a {
+  display: none;
+}
+
+#items .item .flex-child2 h3 {
+  margin-bottom: 20px;
+}
+
+#items .item .flex-child2 .regular {
+  color: #f13;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+#items .item .flex-child2 .discount {
+  color: #f13;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+#items .item .flex-child2 .line {
+  text-decoration: line-through;
+  color: #888;
+  font-weight: normal;
+  font-size: 1.2rem;
+  margin-bottom: 0;
+}
+
+#items .item .flex-child2 .description {
+  line-height: 1.8rem;
+}
