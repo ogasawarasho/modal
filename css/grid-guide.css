@@ -1,0 +1,84 @@
+@charset "UTF-8";
+
+/* グリッドガイド spelunker.jp */
+
+/* 内部テキスト */
+body:not([class="gg"]) > * ,
+body:not([class="gg"]) > * > * ,
+body:not([class="gg"]) > * > * > * ,
+body:not([class="gg"]) > * > * > * > *
+{
+  min-height: 0;
+  line-height: 1.5;
+  color: #000000;
+  font-size: 14px;
+  font-family: 'メイリオ', 'Hiragino Kaku Gothic Pro', sans-serif;
+  font-weight: normal;
+  text-align: left;
+}
+
+/* ベース */
+header , nav , article , section , div , aside , footer , figure , p , ul , li , table
+{
+  border: solid 8px #faa;
+  color: #faa;
+  background-color: #fee;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  
+  text-align: center;
+  line-height: 200px;
+  font-family: Verdata, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 40px;
+}
+  
+  /* ベース-ネスト */
+  * > * ,
+  header > * ,
+  nav > * ,
+  article > * ,
+  footer > * ,
+  aside > * ,
+  div > * 
+  {
+    border-color: #e0e03d;
+    color: #e0e03d;
+    background-color: #ffe;
+  }
+    
+    /* ベース-ネスト-ネスト */
+    * > * > * ,
+    header > nav > ul ,
+    header > * > * ,
+    nav > ul > li ,
+    nav > * > * ,
+    article > *:not(table) > * ,
+    aside > *:not(table) > * ,
+    footer > * > * ,
+    div > *:not(table) > * ,
+    div > article > * ,
+    div > section > * ,
+    div > div > * ,
+    div > aside > * ,
+    div > footer > *
+    {
+      border-color: #aaf;
+      color: #aaf;
+      background-color: #eef;
+    }
+      
+      /* ベース-ネスト-ネスト-ネスト */
+      * > * > * > * ,
+      header > nav > ul > li ,
+      article > *:not(table) > *:not(table) > * ,
+      div > footer > *:not(table) > * ,
+      div > div > *:not(table) > * ,
+      div > article > *:not(table) > * ,
+      div > aside > *:not(table) > *
+      {
+        border-color: #afa;
+        color: #afa;
+        background-color: #efe;
+      }
